@@ -1,0 +1,147 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* CUSTOM CSS */
+/* typography */
+h1{
+    font-family: neue-haas-grotesk-display,sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size:4.2vw;
+    line-height:1.5;
+}
+
+h3{
+    font-family: neue-haas-grotesk-display,sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size:2vw;
+    line-height:1.5;
+}
+
+/* splash */
+.splash{
+    display:grid;
+    grid-template-columns:12.5vw 12.5vw 12.5vw 12.5vw 12.5vw 12.5vw 12.5vw 12.5vw;
+    grid-template-rows:12.5vw 12.5vw 12.5vw 12.5vw;
+}
+
+.splash *{
+    padding:20px;
+    /* background-color: white;
+    border:solid 1px black; */
+}
+
+.splash h1{
+    grid-column-start:1;
+    grid-column-end:4;
+    grid-row-start:1;
+    grid-row-end:3;
+
+}
+
+.splash h3{
+    grid-column-start:2;
+    grid-column-end:3;
+    grid-row-start:3;
+    grid-row-end:4;
+}
+
+#emoji1{
+    grid-column-start:3;
+    grid-column-end:5;
+    grid-row-start:2;
+    grid-row-end:4;    
+    width:12.5vw;
+    height:12.5vw;
+    padding:6.25vw;
+    /* margin:auto; */
+}
+#emoji2{
+    grid-column-start:7;
+    grid-column-end:8;
+    grid-row-start:2;
+    grid-row-end:3;    
+    width:80%;
+    margin:auto;
+}
+
+#emoji3{
+    grid-column-start:1;
+    grid-column-end:2;
+    grid-row-start:3;
+    grid-row-end:4;    
+    width:80%;
+    margin:auto;
+}
+#emoji4{
+    grid-column-start:5;
+    grid-column-end:6;
+    grid-row-start:1;
+    grid-row-end:2;    
+    width:80%;
+    margin:auto;
+}
+
+#color1{
+    grid-column-start:8;
+    grid-column-end:9;
+    grid-row-start:1;
+    grid-row-end:2;
+    background: linear-gradient(0deg, rgba(250,217,97,1) 0%, rgba(247,107,28,1) 100%);
+}
+
+#color2{
+    grid-column-start:1;
+    grid-column-end:2;
+    grid-row-start:4;
+    grid-row-end:5;
+    background: linear-gradient(90deg, rgba(48,35,174,1) 0%, rgba(83,160,253,1) 100%);
+}
+
