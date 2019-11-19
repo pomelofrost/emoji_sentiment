@@ -96,41 +96,47 @@ var neutralbar = {
       };
       vegaEmbed('#readervwriter', readervwriter);
 
-  var position = {
+var position = {
   $schema: "https://vega.github.io/schema/vega-lite/v4.json",
   data: {url: "Positions.csv"},
   "vconcat": [{
     width: 400,
     height: 100,
-    mark: "tick",
+    mark: "text",
     encoding: {
       x: {
         "field": "NePosition", 
-        "type": "quantitative"
-      }
+        "type": "quantitative",
+      },
+      text:{field:"NeEmoji"}
     }
   },{
     width: 400,
     height: 100,
-    mark: "tick",
+    mark: "text",
     encoding: {
       x: {
         "field": "PPosition", 
         "type": "quantitative"
-      }
+      },
+      text:{field:"PEmoji"},
+      "size": {"value": 35}
     }
   },{
     width: 400,
     height: 100,
-    mark: "tick",
+    mark: "text",
     encoding: {
       x: {
         "field": "NUPosition", 
         "type": "quantitative"
-      }
+      },
+      text:{field:"NUEmoji"},
+      "size": {"value": 35}
     }
   }
   ]
 }
+
 vegaEmbed('#position', position);
 
