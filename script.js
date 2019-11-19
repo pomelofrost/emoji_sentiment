@@ -86,14 +86,51 @@ var neutralbar = {
         width:800,
         height:800,
         data: {url: "readervswriter_cleaned.csv"},
-        mark: "point",
+        mark: "text",
         title: "Reader vs. Writer Sentiment",
         encoding: {
             x :{"field": "reader", "type": "quantitative"},
             y: {"field": "writer", "type": "quantitative"},
-          tooltip:{"field":"emoji"}
+            text:{field:"emoji"},
       }
       };
       vegaEmbed('#readervwriter', readervwriter);
 
-    
+  var position = {
+  $schema: "https://vega.github.io/schema/vega-lite/v4.json",
+  data: {url: "Positions.csv"},
+  "vconcat": [{
+    width: 400,
+    height: 100,
+    mark: "tick",
+    encoding: {
+      x: {
+        "field": "NePosition", 
+        "type": "quantitative"
+      }
+    }
+  },{
+    width: 400,
+    height: 100,
+    mark: "tick",
+    encoding: {
+      x: {
+        "field": "PPosition", 
+        "type": "quantitative"
+      }
+    }
+  },{
+    width: 400,
+    height: 100,
+    mark: "tick",
+    encoding: {
+      x: {
+        "field": "NUPosition", 
+        "type": "quantitative"
+      }
+    }
+  }
+  ]
+}
+vegaEmbed('#position', position);
+
