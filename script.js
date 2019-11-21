@@ -13,7 +13,7 @@ var positive = {
       "type": "nominal",
       "sort": "-y",
       "orient": "right",
-      "axis": {title: 'Positivly-Defined Emoji'}
+      "axis": {title: 'Positivly-Defined Emoji',labelAngle:"0",labelFontSize:30}
     },
     y: {
       "field": "Positive", 
@@ -41,7 +41,7 @@ var neutralbar = {
         "type": "nominal",
         "sort": "-y",
         "orient": "right",
-        "axis": {title: 'Neutrally-Defined Emoji'}
+        "axis": {title: 'Neutrally-Defined Emoji',labelAngle:"0",labelFontSize:30}
       },
       y: {
         "field": "Neutral", 
@@ -68,7 +68,7 @@ var neutralbar = {
         "type": "nominal",
         "sort": "-y",
         "orient": "right",
-        "axis": {title: 'Negatively-Defined Emoji'}
+        "axis": {title: 'Negatively-Defined Emoji',labelAngle:"0",labelFontSize:30}
       },
       y: {
         "field": "Negative", 
