@@ -1,8 +1,8 @@
 var positive = {
   $schema: 'https://vega.github.io/schema/vega-lite/v2.0.json',
   description: 'A simple bar chart with embedded data.',
-  width:800,
-  height:600,
+  width:300,
+  height:300,
   data: {url:"positive.csv"},
   mark: 'bar',
   title: "Positivity Score within Positive-Defined Emoji",
@@ -13,12 +13,12 @@ var positive = {
       "type": "nominal",
       "sort": "-y",
       "orient": "right",
-      "axis": {title: 'Neutrality-Defined Emoji'}
+      "axis": {title: 'Positivly-Defined Emoji'}
     },
     y: {
       "field": "Positive", 
       "type": "quantitative",
-      "axis": {title: 'Neutrality Score'}
+      "axis": {title: 'Positivity Score'}
     },
     "color": {"value": "#ffa500"},
   }
@@ -29,8 +29,8 @@ vegaEmbed('#positive', positive);
 var neutralbar = {
     $schema: 'https://vega.github.io/schema/vega-lite/v2.0.json',
     description: 'A simple bar chart with embedded data.',
-    width:800,
-    height:600,
+    width:300,
+    height:300,
     data: {url:"neutral.csv"},
     mark: 'bar',
     title: "Neutrality Score within Neutral-Defined Emoji",
@@ -41,14 +41,14 @@ var neutralbar = {
         "type": "nominal",
         "sort": "-y",
         "orient": "right",
-        "axis": {title: 'Neutrality-Defined Emoji'}
+        "axis": {title: 'Neutrally-Defined Emoji'}
       },
       y: {
         "field": "Neutral", 
         "type": "quantitative",
         "axis": {title: 'Neutrality Score'}
       },
-      "color": {"value": "#ff9900"},
+      "color": {"value": "#D8D8D8"},
     }
   };
   vegaEmbed('#neutral', neutralbar);
@@ -56,8 +56,8 @@ var neutralbar = {
   var negative = {
     $schema: 'https://vega.github.io/schema/vega-lite/v2.0.json',
     description: 'A simple bar chart with embedded data.',
-    width:800,
-    height:600,
+    width:300,
+    height:300,
     data: {url:"negative.csv"},
     mark: 'bar',
     title: "Negativity Score within Negative-Defined Emoji",
@@ -68,12 +68,12 @@ var neutralbar = {
         "type": "nominal",
         "sort": "-y",
         "orient": "right",
-        "axis": {title: 'Neutrality-Defined Emoji'}
+        "axis": {title: 'Negatively-Defined Emoji'}
       },
       y: {
         "field": "Negative", 
         "type": "quantitative",
-        "axis": {title: 'Neutrality Score'}
+        "axis": {title: 'Negativity Score'}
       },
       "color": {"value": "#E15759"},
     }
@@ -86,12 +86,12 @@ var neutralbar = {
         width:800,
         height:800,
         data: {url: "readervswriter_cleaned.csv"},
-        mark: "text",
+        mark: "point",
         title: "Reader vs. Writer Sentiment",
         encoding: {
             x :{"field": "reader", "type": "quantitative"},
             y: {"field": "writer", "type": "quantitative"},
-            text:{field:"emoji"},
+            // text:{field:"emoji"},
       }
       };
       vegaEmbed('#readervwriter', readervwriter);
